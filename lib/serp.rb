@@ -24,7 +24,7 @@ module Serp
   private
 
   def self.parse_href(href)
-    URI.parse(href.scan(/(http:\/\/.*)\//).flatten.last).hostname.gsub('www.', '')
+    URI.parse(href.scan(/(http:\/\/.*)\//).flatten.last).host.gsub('www.', '')
 
   end
 end
