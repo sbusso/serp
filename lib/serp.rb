@@ -11,8 +11,6 @@ module Serp
     google_form = page.form('f')
     google_form.q = keywords
     page = agent.submit(google_form, google_form.buttons.first)
-    # p page
-
     (1..pages).each do |pn|
       (page/"li.g h3.r a").each do |link|
         results << parse_href(link.attribute('href').value) if link.attribute('href').value =~ /^\/url/

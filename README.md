@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    Serp.rank("keywords", 4) # search 4 pages of result for keywords
 
 ## Contributing
 
