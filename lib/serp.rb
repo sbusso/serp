@@ -4,10 +4,10 @@ require 'mechanize'
 require 'open-uri'
 
 module Serp
-  def self.rank(keywords, pages = 3)
+  def self.rank(keywords, locale = 'en' , pages = 3)
     results = []
     agent = Mechanize.new
-    page = agent.get("http://www.google.com?hl=en")
+    page = agent.get("http://www.google.com?hl=#{locale}")
     google_form = page.form('f')
     google_form.q = keywords
     page = agent.submit(google_form, google_form.buttons.first)
