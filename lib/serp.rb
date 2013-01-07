@@ -5,13 +5,12 @@ require 'open-uri'
 
 module Serp
 
-  
   def self.search_engine=(val)
     @@search_engine = val
   end
 
   def self.search_engine
-    @@search_engine || "http://www.google.com"
+    @@search_engine ||= "http://www.google.com"
   end
 
   def self.rank(keywords, locale = 'en' , pages = 3)
