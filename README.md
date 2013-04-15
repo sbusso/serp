@@ -1,6 +1,6 @@
 # Serp
 
-TODO: Write a gem description
+Extract domains from google search engine results
 
 ## Installation
 
